@@ -10,27 +10,30 @@
     <TextView
         android:id="@+id/textoCuadro"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_margin="10dp"
         android:text="Ingrese un valor:"
-        android:textSize="20sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Fila 1 -->
+
     <Button
         android:id="@+id/button1"
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginStart="3dp"
         android:text="1"
-        app:layout_constraintTop_toBottomOf="@+id/textoCuadro"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonC"
+        app:layout_constraintVertical_bias="0.26"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
@@ -38,12 +41,15 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="3dp"
         android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintTop_toBottomOf="@+id/textoCuadro"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonC"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
@@ -51,12 +57,14 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
         android:text="3"
-        app:layout_constraintTop_toBottomOf="@+id/textoCuadro"
-        app:layout_constraintEnd_toStartOf="@+id/buttonSuma"
-        app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMult"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonC"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
@@ -65,22 +73,65 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="+"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIgual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.3"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <Button
+        android:id="@+id/buttonResta"
+        style="@style/botonrecto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:text="-"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
         app:layout_constraintTop_toBottomOf="@+id/textoCuadro"
         app:layout_constraintWidth_percent="0.22" />
 
     <!-- Fila 2 -->
     <Button
+        android:id="@+id/buttonMult"
+        style="@style/botonrecto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="*"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@+id/buttonResta"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <!-- Fila 2 -->
+
+    <Button
+        android:id="@+id/buttonDiv"
+        style="@style/botonrecto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="/"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSuma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMult"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <Button
         android:id="@+id/button4"
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
         android:text="4"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1"
         app:layout_constraintWidth_percent="0.25" />
@@ -90,10 +141,14 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="229dp"
         android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintWidth_percent="0.25" />
@@ -103,36 +158,40 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="229dp"
         android:text="6"
-        app:layout_constraintEnd_toStartOf="@+id/buttonIgual"
-        app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintWidth_percent="0.25" />
 
+    <!-- Fila 3 -->
     <Button
         android:id="@+id/buttonIgual"
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:text="="
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.3"
-        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintHeight_percent="0.15"
         app:layout_constraintTop_toBottomOf="@+id/buttonSuma"
         app:layout_constraintWidth_percent="0.22" />
 
-    <!-- Fila 3 -->
     <Button
         android:id="@+id/button7"
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
         android:text="7"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         app:layout_constraintWidth_percent="0.25" />
@@ -142,10 +201,12 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginEnd="3dp"
         android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintWidth_percent="0.25" />
@@ -155,11 +216,12 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
+        android:layout_margin="3dp"
+        android:layout_marginEnd="3dp"
         android:text="9"
-        app:layout_constraintEnd_toStartOf="@+id/buttonC"
-        app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSuma"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintTop_toBottomOf="@+id/button6"
         app:layout_constraintWidth_percent="0.25" />
 
@@ -168,11 +230,13 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="32dp"
         android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/buttonC"
-        app:layout_constraintHeight_percent="0.33"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIgual"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
         app:layout_constraintWidth_percent="0.75" />
 
     <Button
@@ -180,12 +244,15 @@
         style="@style/botonrecto"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="14dp"
         android:text="C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.35"
-        app:layout_constraintStart_toEndOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/buttonIgual"
-        app:layout_constraintWidth_percent="0.22" />
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toStartOf="@+id/buttonResta"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoCuadro"
+        app:layout_constraintWidth_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
